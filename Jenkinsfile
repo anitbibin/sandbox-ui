@@ -1,14 +1,8 @@
 pipeline {
-  agent {
-    dockerfile true
-  }
+  agent none
   stages {
-    stage('master') {
-      steps {
-        sh 'docker build -t anitbibin/sandbox-ui .'
-      }
-    }
     stage("Docker build") {
+      agent { dockerfile true }
       steps {
         sh "docker build -t anitbibin/sandbox-ui ."
       }
