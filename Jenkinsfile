@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('dev') {
+    stage('master') {
       steps {
-        sh 'docker build -t anitbibin/sandbox-ui .'
+        sh 'docker run anitbibin/sandbox-ui'
       }
     }
   }
