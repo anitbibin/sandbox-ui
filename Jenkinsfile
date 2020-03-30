@@ -3,7 +3,7 @@ pipeline {
   agent none
   stages {
     stage('Docker Build') {
-      agent { Dockerfile true }
+      agent { dockerfile true }
       steps {
         sh 'docker build -t anitbibin/sandbox-ui .'
       }
