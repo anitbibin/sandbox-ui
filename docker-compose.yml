@@ -1,0 +1,10 @@
+version: '3'
+services:
+    sandbox-ui:
+        tty: true
+        build: .
+        ports:
+         - "5001:3000"
+        volumes:
+         - /app/node_modules
+         - .:/app
